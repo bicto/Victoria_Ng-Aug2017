@@ -20,8 +20,15 @@ public class Calculate {
 	public static double average (double operand1, double operand2, double operand3 ) {
 		double averaged = (operand1+operand2+operand3)/3;
 		return averaged;
-		
+	}
 	//converts radians to degrees
-		
+	public static double toDegrees (double operand) {
+		double converted = operand*(180/3.14159);
+		return converted;
+	}
+	//converts degrees to radians
+	public static double toRadians (double operand) {
+		double converted = operand*(3.14159/180);
+		return converted;
 	}
 }
