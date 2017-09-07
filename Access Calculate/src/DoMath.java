@@ -8,8 +8,10 @@ public class DoMath {
 		System.out.println(Calculate.square(-7));
 		System.out.println(Calculate.cube(-7));
 		System.out.println(Calculate.average(6.4, 8.0, 9.4));
+		System.out.println(Calculate.average(6.4, 8.0));
 		System.out.println(Calculate.toDegrees(0.5));
 		System.out.println(Calculate.toRadians(60));
+		System.out.println(Calculate.discriminant(3,7,5));
 	}
 
 }
