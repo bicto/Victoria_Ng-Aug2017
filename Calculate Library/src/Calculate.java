@@ -41,4 +41,11 @@ public class Calculate {
 		double discriminants = b^2 - 4*a*c;
 		return discriminants;
 	}
+	//returns improper frac
+	public static double toImproperFrac (double n, double k, double s) {
+		double improperConvert = (n*s+k)/s;
+		System.out.print (improperConvert);
+		System.out.print ("/");
+		System.out.print (s);
+	}
 }
