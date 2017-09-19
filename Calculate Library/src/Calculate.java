@@ -41,11 +41,99 @@ public class Calculate {
 		double discriminants = b^2 - 4*a*c;
 		return discriminants;
 	}
-	//returns improper frac
-	public static double toImproperFrac (double n, double k, double s) {
-		double improperConvert = (n*s+k)/s;
-		System.out.print (improperConvert);
-		System.out.print ("/");
-		System.out.print (s);
+	
+	public static String toImproperFrac (int number, int numerator, int denominator) {
+    	int toImproperFrac = (number*denominator + numerator);
+    	return toImproperFrac + "/" + denominator;
+}
+
+//toMixedNum
+public static String toMixedNum (int numerator, int denominator) {
+    	int x= (numerator/denominator);
+    	int y = (numerator%denominator);
+    	String toMixedNum = x + " " + (y + "/" + denominator);
+    	return toMixedNum;
+}
+
+//foil
+public static String foil (int a, int b, int c, int d, String x) {
+    	int term1 = (a*c);
+    	int term2 = (a*d) + (b* c);
+    	int term3 = (b*d);
+    	String foil = term1 + x + "^2+" + term2 + x + "+" + term3;
+    	return foil;
+}
+/*
+//determines whether one integer is evenly divisible by another
+//parameters: two integers, returns a Boolean
+*/
+public static Boolean isDivisibleBy (int num1, int num2) {
+    	if (num2 == 0 || num1 == 0) {
+                	throw new IllegalArgumentException ("divisor : 0");
+    	}
+    	if (num1 % num2 == 0 || num2 % num1 == 0) {
+                	return true;
+    	} else {
+                	return false;
+    	}
+}
+
+/*
+//returns the value of the number passed, accepts a double and returns a double
+*/
+public static double absValue (double a) {
+    	if ( a>0) {
+          	return a;
+    	} else {
+    		return a*-1;
+    	}
+}
+
+/*
+//returns the greater of the values passed
+//accepts 2 doubles and returns a double
+*/
+public static double max (double num1, double num2) {
+    	if (num1>num2) {
+    		return num1;
+    } else {
+		return num2;
+	}
+}
+
+/*
+//accepts 3 doubles, returns a double
+*/
+public static double max (double number1, double number2, double number3) {
+	if (number1 > number2 && number1 > number3) {
+		return number1;
+	} else if (number2 > number1 && number2 > number3) {
+	return number2;
+	} else {
+	return number3;
+	}
+}
+
+/* 
+//returns the smaller of the 2 values passed
+//accepts 2 integers, returns an integer
+*/
+public static int min (int num1, int num2) {
+	if (num1 < num2) {
+	return num1;
+} else {
+	return num2;
+}
+}
+
+/*
+//rounds a double to 2 decimal places, returns a double
+*/
+	public static double round2 (double value) {
+		value = (value*100) + 0.5;
+		value = (int) value;
+		value = (double) value;
+		value = value/100;
+		return value;
 	}
 }
