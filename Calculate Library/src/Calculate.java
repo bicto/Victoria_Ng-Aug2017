@@ -58,6 +58,7 @@ public class Calculate {
 //part 2
 	//isDivisibleBy: determines whether one integer is evenly divisible by another
 	//parameters: two integers, returns a Boolean
+	//throws exception if inputs are 0
 	public static Boolean isDivisibleBy (int num1, int num2) {
     	if (num2 == 0 || num1 == 0) {
                 	throw new IllegalArgumentException ("divisor : 0");
@@ -127,6 +128,7 @@ public class Calculate {
 	//exponent
 	// accepts a double and an integer and returns a double
 	// raises a value to a positive integer power
+	// throws exception if the input for power is negative
 	public static double exponent (double base, int power) { 
 		if (power < 0) {
 			throw new IllegalArgumentException("negative exponent: " + power);
@@ -141,6 +143,7 @@ public class Calculate {
 	//factorial
 	// accepts an integer and returns an integer
 	// returns the factorial of the value passed
+	// throws exception if input is negative
 	public static int factorial (int a) { 
 		if (a < 0) {
 			throw new IllegalArgumentException("negative a: " + a);
@@ -183,6 +186,7 @@ public class Calculate {
 	//sqrt
 	// accepts and returns a double
 	// returns an approximation of the square root of the value passed, accurate to two decimal places
+	// throws exception if input is negative
 	public static double sqrt (double a) { 
 		if (a < 0) {
 			throw new IllegalArgumentException ("negative a:" + a);
@@ -190,3 +194,4 @@ public class Calculate {
 		return Math.sqrt(a);
 	}
 }
+	
