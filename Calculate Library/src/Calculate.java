@@ -193,5 +193,33 @@ public class Calculate {
 		}
 		return Math.sqrt(a);
 	}
+
+	// uses the quadratic formula the approximate the real roots
+public static String quadForm(int a, int b, int c){
+	if (Calculate.discriminant(a,b,c) < 0){
+		throw new IllegalArgumentException("no real roots");
+
+	}
+	
+	else if (Calculate.discriminant(a,b,c) == 0){
+		 String roots = Calculate.round2(-b /(2*a)) + " ";
+		 return roots;
+	}
+	
+	else {
+		double root1 =  Calculate.round2((-b + Calculate.sqrt(Calculate.discriminant(a, b, c)))/(2*a));
+		double root2 =  Calculate.round2((-b - Calculate.sqrt(Calculate.discriminant(a, b, c)))/(2*a));
+		if (root1 > root2){
+			String roots = root2 + " and " + root1;
+			return roots;
+		}
+		else {
+			String roots = root1 + " and " + root2;
+			return roots;
+		}
+		
+		}		
+}
+
 }
 	
