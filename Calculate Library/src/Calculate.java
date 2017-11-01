@@ -221,5 +221,10 @@ public static String quadForm(int a, int b, int c){
 		}		
 }
 
+//converts a binomial multiplication (ax+b)(cx+d) into a quadratic equation
+public static String foil (int a, int b, int c, int d, String n){
+	String answer = (a*c)+n+"^2 + "+ ((a*d)+(b*c))+n +  " +"  +(b*d);
+	return answer;
+}
 }
 	
