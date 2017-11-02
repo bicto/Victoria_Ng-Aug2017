@@ -1,3 +1,7 @@
+/*Victoria Ng
+ * Nov 1 2017
+ * Array MiniLab
+ */
 import java.util.Arrays;
 
 public class LotsOfCopies {
